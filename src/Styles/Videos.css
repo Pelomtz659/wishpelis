@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y elegante */
+    background-color: #0c1e25; /* Fondo de la página */
+}
+
+/* Contenedor de las películas */
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Añadimos un gap para separar los recuadros */
+    padding: 20px;
+}
+
+/* Estilo de las imágenes de las películas */
+.movies-container img {
+    width: 100%; /* Ancho del contenedor */
+    max-width: 300px; /* Ancho máximo */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para efecto de profundidad */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto hover en las imágenes */
+.movies-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor principal */
+.mainBgColor {
+    background-color: #0c1e25;
+    width: 100%;
+}
+
+/* Contenedor secundario para el modo claro */
+.secondaryBgColor {
+    background-color: #f7f9f9;
+    width: 100%;
+}
+
+/* Texto de los títulos de las películas */
+.movies-container h3 {
+    color: #ecf0f1; /* Color claro para contraste */
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0 10px;
+}
+
+/* Texto más pequeño si el título es largo */
+#smaller-Text {
+    font-size: 0.9rem;
+}
+
+/* Contenedor individual para cada película */
+#container {
+    position: relative;
+    background-color: #34495e; /* Fondo oscuro del contenedor */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 10px; /* Añadimos padding para separar la imagen del borde */
+    display: flex;
+    flex-direction: column; /* Para alinear contenido verticalmente */
+    align-items: center;
+}
+
+#playIcon {
+    font-size: 3rem; /* Tamaño del icono */
+    color: #f39c12; /* Color dorado para el icono */
+    opacity: 0.7; /* Opacidad reducida para que no distraiga demasiado */
+    transition: opacity 0.3s;
+    cursor: pointer;
+    z-index: 1; /* Asegura que el icono esté por encima de la imagen */
+    position: absolute; /* Posicionamiento absoluto para superponerlo en la esquina */
+    top: 10px; /* Colocamos el icono en la esquina superior */
+    right: 10px; /* Colocamos el icono en la esquina derecha */
+}
+
+/* Efecto hover en el icono de reproducción */
+#container:hover #playIcon {
+    opacity: 1; /* Mostramos completamente el icono al hacer hover */
+}
+
+/* Contenedor inactivo */
+#NoContainer {
+    opacity: 0.35;
+}
+
+/* Tema claro para texto */
+.LightThemeClose {
+    color: #ff206e;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    align-items: center; /* Alinea los botones verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+
+/* Estilos para los botones de paginación */
+.prevButton, .nextButton {
+    background-color: #f39c12; /* Color dorado */
+    border: none;
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+/* Efecto hover en los botones */
+.prevButton:hover, .nextButton:hover {
+    background-color: #d35400; /* Color más oscuro al pasar el ratón */
+}
+
+/* Información de la página */
+.pageInfo {
+    color: #ecf0f1; /* Color claro para el texto */
+    font-size: 1.1rem;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .movies-container {
+        padding: 10px;
+    }
+
+    .movies-container img {
+        max-width: 250px;
+    }
+
+    #playIcon {
+        font-size: 30px;
+    }
+
+    #container {
+        padding: 5px;
+    }
+
+    /* Ajuste de estilos para títulos de películas */
+    .movies-container h3 {
+        font-size: 1rem;
+    }
+
+    /* Ajuste de estilos para los botones de paginación */
+    .prevButton, .nextButton {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste de estilos para la información de la página */
+    .pageInfo {
+        font-size: 1rem;
+    }
+}
