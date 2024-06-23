@@ -1,147 +1,155 @@
-/* // NavBar.css */
+/* Estilos generales de la barra de navegación */
 nav {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    background-color: #001219;
-    align-items: center;
-}
-nav h1{
-    color: #fff;
-    margin-left: 40px;
-}
-nav a {
-    text-decoration: none;
-}
-nav span{
-    cursor: pointer;
-    margin-left: 40px;
-    font-size: .85rem;
-    text-transform: uppercase;
-}
-nav span:hover{
-    color: #fff;
-    border-bottom: 2px solid #EE9B00;
-    padding-bottom: 5px;
-}
-span #HomeLight, #MoviesLight, #TrendingLight, #PricingLight{
-    color: #fff;
-}
-span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:hover{
-    border-bottom: 2px solid #ff206e;
-}
-#navBarColor{
-    background-color: #38bdab;
-    transition: .6s;
-}
-.nav-options{
-    display: flex;
-    align-items: center;
-}
-#heading{
-    color: #ff206e;
-}
-#navBarColor span:hover{
-    border-bottom: 2px solid #ff206e;
-    padding-bottom: 5px;
-}
-.input-group{
-    display: flex;
-    align-items: center;
-}
-#Color-switcher{
-    position: relative;
-    margin-right: 40px;
-    background-color: #413E44;
-    width: 80px;
-    height: 40px;
-    border-radius: 20px;
-}
-#Color-switcher-mover{
-    position: absolute;
-    left: 5px;
-    top: 4px;
-    background-color: #fff;
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    transition: .6s;
-}
-#Color-switcher-moved{
-    position: absolute;
-    background-color: #fff;
-    left: 40px;
-    top: 4px;
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    transition: .6s;
-}
-.input-group input{
-    position: relative;
-    width: 323px;
-    height: 4vh;
-    border-radius: 16px;
-    border: none;
-    margin-right: 30px;
-}
-.input-group input[type='text']{
-    padding-left: 17px;
-    font-size: 1rem;
-    color: black;
-}
-.input-group input::placeholder{
-    color: black;
-}
-.input-group input:focus{
-    outline: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #001219; /* Dark mode background color */
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.group {
-    display: flex;
-    align-items: center;
-    position: relative;
-    max-width: 190px;
-  }
-  
-  .input {
-    font-family: "Montserrat", sans-serif;
-    width: 100%;
-    height: 45px;
-    padding-left: 2.5rem;
-    box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
-    border: 0;
-    border-radius: 12px;
-    background-color: #16171d;
-    outline: none;
-    color: #bdbecb;
-    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-    cursor: text;
-    z-index: 0;
-  }
-  
-  .input::placeholder {
-    color: #bdbecb;
-  }
-  
-  .input:hover {
-    box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
-  }
-  
-  .input:active {
-    transform: scale(0.95);
-  }
-  
-  .input:focus {
-    box-shadow: 0 0 0 2.5px #2f303d;
-  }
-  
-  .search-icon {
-    position: absolute;
-    left: 1rem;
-    fill: #bdbecb;
-    width: 1rem;
-    height: 1rem;
-    pointer-events: none;
-    z-index: 1;
-  }
+nav h1 {
+  color: #fff;
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav span {
+  cursor: pointer;
+  margin-left: 2.5rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: #fff;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav span:hover {
+  color: #00b4d8; /* Color de acento azul */
+  border-bottom: 2px solid #00b4d8;
+  padding-bottom: 0.3125rem;
+}
+
+/* Estilos específicos para el modo claro */
+.navBarColor {
+  background-color: #f0f0f0; /* Light mode background color */
+  transition: background-color 0.6s;
+}
+
+.navBarColor h1,
+.navBarColor span {
+  color: #333; /* Light mode text color */
+}
+
+.navBarColor span:hover {
+  color: #00b4d8; /* Color de acento azul */
+  border-bottom: 2px solid #00b4d8;
+  padding-bottom: 0.3125rem;
+}
+
+.nav-options {
+  display: flex;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.input-group .group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 20rem;
+}
+
+/* Estilos del switch de tema */
+#Color-switcher {
+  position: relative;
+  background-color: #413e44;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+
+#Color-switcher-mover,
+#Color-switcher-moved {
+  position: absolute;
+  background-color: #fff;
+  width: 2.0625rem;
+  height: 2.0625rem;
+  border-radius: 50%;
+  top: 0.25rem;
+  transition: 0.6s;
+}
+
+#Color-switcher-mover {
+  left: 0.3125rem;
+}
+
+#Color-switcher-moved {
+  left: 2.5rem;
+}
+
+/* Estilos del campo de búsqueda */
+.input-group input {
+  width: 100%;
+  height: 2.8125rem;
+  border-radius: 1rem;
+  border: none;
+  padding-left: 2.5rem;
+  box-shadow: 0 0 0 0.0938rem #ccc, 0 0 1.5625rem -1.0625rem #000; /* Light mode shadow */
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+}
+
+.input-group input::placeholder {
+  transition: color 0.25s;
+}
+
+.input-group input:focus {
+  outline: none;
+}
+
+/* Estilos del modo oscuro */
+.input-dark {
+  background-color: #16171d;
+  color: #bdbecb;
+  box-shadow: 0 0 0 0.1563rem #2f303d, 0 0 1.5625rem -0.9375rem #000;
+}
+
+.input-dark::placeholder {
+  color: #bdbecb;
+}
+
+.input-dark:hover {
+  box-shadow: 0 0 0 0.1563rem #2f303d, 0 0 1.5625rem -0.9375rem #000;
+}
+
+/* Estilos del icono de búsqueda */
+.search-icon {
+  position: absolute;
+  left: 0.625rem;
+  fill: #bdbecb;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Estilos específicos para el modo claro */
+.navBarColor .search-icon {
+  fill: #333; /* Asegurando visibilidad del ícono en el modo claro */
+}
