@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Fragment, useContext, useEffect, useState } from "react";
-import { AiFillPlayCircle } from 'react-icons/ai';
+import { FaPlayCircle } from 'react-icons/fa'; // Importa el nuevo ícono
 import { Container } from "./NavBar";
 import '../Styles/Videos.css';
 import NoImg from '../images/NoImage.png';
@@ -69,7 +69,7 @@ function Movies() {
               {moviesData.map((movie) => (
                 <Fragment key={movie.id}>
                   <div id={'container'}>
-                    <AiFillPlayCircle id="playIcon" />
+                    <FaPlayCircle id="playIcon" /> {/* Nuevo ícono de reproducción */}
                     <img src={movie.poster_path ? `${Images}${movie.poster_path}` : NoImg} alt={movie.title} />
                     <h3 id={movie.title.length > 28 ? 'smaller-Text' : ''}>{movie.title}</h3>
                   </div>
