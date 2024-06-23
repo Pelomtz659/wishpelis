@@ -53,7 +53,7 @@ body {
 }
 
 /* Texto más pequeño si el título es largo */
-#smaller-Text {
+.smaller-Text {
     font-size: 0.9rem;
 }
 
@@ -70,27 +70,26 @@ body {
     align-items: center;
 }
 
+
 #playIcon {
-    font-size: 3rem; /* Tamaño del icono */
-    color: #f39c12; /* Color dorado para el icono */
-    opacity: 0.7; /* Opacidad reducida para que no distraiga demasiado */
-    transition: opacity 0.3s;
+    font-size: 3rem; /* Tamaño del ícono */
+    color: #1259f3; /* Color inicial del ícono */
+    opacity: 0.7; /* Opacidad reducida para el ícono */
+    transition: opacity 0.3s, color 0.3s; /* Transiciones para suavizar el cambio */
     cursor: pointer;
-    z-index: 1; /* Asegura que el icono esté por encima de la imagen */
-    position: absolute; /* Posicionamiento absoluto para superponerlo en la esquina */
-    top: 10px; /* Colocamos el icono en la esquina superior */
-    right: 10px; /* Colocamos el icono en la esquina derecha */
+    z-index: 1; /* Asegura que el ícono esté por encima de la imagen */
+    position: absolute; /* Posicionamiento absoluto para superponerlo */
+    top: 50%; /* Colocar el ícono en el centro vertical */
+    left: 50%; /* Colocar el ícono en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centrar el ícono completamente */
 }
 
-/* Efecto hover en el icono de reproducción */
+/* Efecto hover en el ícono de reproducción */
 #container:hover #playIcon {
-    opacity: 1; /* Mostramos completamente el icono al hacer hover */
+    opacity: 1; /* Mostrar completamente el ícono al hacer hover */
+    color: #07656a; /* Cambiar el color del ícono al hacer hover */
 }
 
-/* Contenedor inactivo */
-#NoContainer {
-    opacity: 0.35;
-}
 
 /* Tema claro para texto */
 .LightThemeClose {
